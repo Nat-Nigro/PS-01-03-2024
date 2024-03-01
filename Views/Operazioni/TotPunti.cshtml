@@ -1,0 +1,29 @@
+﻿@model IEnumerable<PS_01_03_2024.Models.Verbale>
+
+<h2 class="text-center">TOTALE  PUNTI DECURTATI PER TRASGRESSORE</h2>
+<p>
+    @Html.ActionLink("<- Indietro", "Index")
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th class="bg-danger text-white">ID Anagrafica</th>
+            <th class="bg-danger text-white">Nome</th>
+            <th class="bg-danger text-white">Cognome</th>
+            <th class="bg-danger text-white">Totale Punti Decurtati</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td class="fw-bold">@item.IdAnagrafica</td>
+                <td class="fw-bold">@item.Trasgressore.Nome</td>
+                <td class="fw-bold">@item.Trasgressore.Cognome</td>
+                <td class="fw-bold">@item.DecurtamentoPunti</td>
+            </tr>
+        }
+    </tbody>
+</table>
+

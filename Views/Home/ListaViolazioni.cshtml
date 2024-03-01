@@ -1,0 +1,45 @@
+﻿@model IEnumerable<PS_01_03_2024.Models.Violazione>
+
+@{
+    ViewBag.Title = "ListaViolazioni";
+}
+
+<h2>Lista Violazioni</h2>
+
+
+<table class="table">
+    <tr>
+        <th class="bg-primary fw-bold">
+            @Html.DisplayNameFor(model => model.IdViolazione)
+        </th>
+        <th class="bg-primary fw-bold">
+            @Html.DisplayNameFor(model => model.Descrizione)
+        </th>
+        <th class="bg-primary fw-bold">
+            @Html.DisplayNameFor(model => model.IdVerbale)
+        </th>
+        <th class="bg-primary fw-bold">
+            @Html.DisplayNameFor(model => model.Contestabile)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td class="fw-bold">
+            @Html.DisplayFor(modelItem => item.IdViolazione)
+        </td>
+        <td class="fw-bold">
+            @Html.DisplayFor(modelItem => item.Descrizione)
+        </td>
+        <td class="fw-bold">
+            @Html.DisplayFor(modelItem => item.IdVerbale)
+        </td>
+        <td class="fw-bold">
+            @Html.DisplayFor(modelItem => item.Contestabile)
+        </td>
+
+    </tr>
+}
+
+</table>

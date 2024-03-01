@@ -1,0 +1,65 @@
+﻿@model IEnumerable<PS_01_03_2024.Models.Trasgressore>
+
+@{
+    ViewBag.Title = "ListaTrasgressori";
+}
+
+<h2>ListaTrasgressori</h2>
+
+<p>
+    @Html.ActionLink("INSERISCI NUOVO TRASGRESSORE", "NewTrasgressore", new { }, new { @class = "btn btn-warning rounded-5 mb-2 fw-bold" })
+</p>
+<table class="table">
+    <tr>
+        <th class="bg-primary text-white">
+            @Html.DisplayNameFor(model => model.IdAnagrafica)
+        </th>
+        <th class="bg-primary text-white">
+            @Html.DisplayNameFor(model => model.Nome)
+        </th>
+        <th class="bg-primary text-white">
+            @Html.DisplayNameFor(model => model.Cognome)
+        </th>
+        <th class="bg-primary text-white">
+            @Html.DisplayNameFor(model => model.Indirizzo)
+        </th>
+        <th class="bg-primary text-white">
+            @Html.DisplayNameFor(model => model.Citta)
+        </th>
+        <th class="bg-primary text-white">
+            @Html.DisplayNameFor(model => model.CAP)
+        </th>
+        <th class="bg-primary text-white">
+            @Html.DisplayNameFor(model => model.CF)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td class="fw-bold">
+            @Html.DisplayFor(modelItem => item.IdAnagrafica)
+        </td>
+        <td class="fw-bold">
+            @Html.DisplayFor(modelItem => item.Nome)
+        </td>
+        <td class="fw-bold">
+            @Html.DisplayFor(modelItem => item.Cognome)
+        </td>
+        <td class="fw-bold">
+            @Html.DisplayFor(modelItem => item.Indirizzo)
+        </td>
+        <td class="fw-bold">
+            @Html.DisplayFor(modelItem => item.Citta)
+        </td>
+        <td class="fw-bold">
+            @Html.DisplayFor(modelItem => item.CAP)
+        </td>
+        <td class="fw-bold">
+            @Html.DisplayFor(modelItem => item.CF)
+        </td>
+      
+    </tr>
+}
+
+</table>

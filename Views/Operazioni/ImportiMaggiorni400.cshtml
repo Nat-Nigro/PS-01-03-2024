@@ -1,0 +1,67 @@
+﻿@model IEnumerable<PS_01_03_2024.Models.Verbale>
+
+@{
+    ViewBag.Title = "ImportiMaggiorni400";
+}
+
+<h2>Lista di Violazioni con Importo maggiorni di 400</h2>
+
+<p>
+    @Html.ActionLink("<- Indietro", "Index")
+</p>
+<table class="table">
+    <tr>
+        <th class="bg-danger text-white">
+            @Html.DisplayNameFor(model => model.IdVerbale)
+        </th>
+        <th class="bg-danger text-white">
+            @Html.DisplayNameFor(model => model.DataViolazione)
+        </th>
+        <th class="bg-danger text-white">
+            @Html.DisplayNameFor(model => model.IndirizzoViolazione)
+        </th>
+        <th class="bg-danger text-white">
+            @Html.DisplayNameFor(model => model.NominativoAgente)
+        </th>
+        <th class="bg-danger text-white">
+            @Html.DisplayNameFor(model => model.DataTrascrizioneVerbale)
+        </th>
+        <th class="bg-danger text-white">
+            @Html.DisplayNameFor(model => model.Importo)
+        </th>
+        <th class="bg-danger text-white">
+            @Html.DisplayNameFor(model => model.DecurtamentoPunti)
+        </th>
+   
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td class="fw-bold">
+                @Html.DisplayFor(modelItem => item.IdVerbale)
+            </td>
+            <td class="fw-bold">
+                @Html.DisplayFor(modelItem => item.DataViolazione)
+            </td>
+            <td class="fw-bold">
+                @Html.DisplayFor(modelItem => item.IndirizzoViolazione)
+            </td>
+            <td class="fw-bold">
+                @Html.DisplayFor(modelItem => item.NominativoAgente)
+            </td>
+            <td class="fw-bold">
+                @Html.DisplayFor(modelItem => item.DataTrascrizioneVerbale)
+            </td>
+            <td class="fw-bold">
+                @Html.DisplayFor(modelItem => item.Importo)
+            </td>
+            <td class="fw-bold">
+                @Html.DisplayFor(modelItem => item.DecurtamentoPunti)
+            </td>
+       
+        </tr>
+    }
+
+</table>

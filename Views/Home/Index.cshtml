@@ -1,0 +1,21 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<main>
+    <section class="d-flex align-items-center justify-content-between" aria-labelledby="aspnetTitle">
+        <h1 id="title" class="display-3 fw-bold text-danger display-1 ">Polizia Municipale<br/> Mani in alto</h1>
+        <img src="https://media.tenor.com/l5tLCEdULmIAAAAC/im-coming-dwayne-johnson.gif" class="rounded-2 shadow p-3 mb-5 bg-white rounded"/>
+    </section>
+    <p class="lead text-center fw-bold display-5">Caro poliziotto, benvenuto! Andiamo ad arrestare qualcuno...</p>
+    <hr/>
+    <div class="container">
+        <div class="row">
+            <section class="d-flex justify-content-between mt-3" aria-labelledby="hostingTitle">
+                @Html.ActionLink("Lista TRASGRESSORI", "ListaTrasgressori", new { }, new { @class = "btn btn-success rounded-0 fw-bold" })
+                @Html.ActionLink("Lista VIOLAZIONI", "ListaViolazioni", new { }, new { @class = "btn btn-success rounded-0 mx-2 fw-bold" })
+                @Html.ActionLink("Lista VERBALI", "ListaVerbali", new { }, new { @class = "btn btn-success rounded-0 fw-bold" })
+            </section>
+        </div>
+    </div>
+</main>

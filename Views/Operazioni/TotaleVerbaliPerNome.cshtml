@@ -1,0 +1,43 @@
+﻿@model IEnumerable<PS_01_03_2024.Models.Verbale>
+
+@{
+    ViewBag.Title = "TotaleVerbaliPerNome";
+}
+
+<h2>Totale verbali per nome</h2>
+
+<p>
+    @Html.ActionLink("<- Indietro", "Index")
+</p>
+<table class="table">
+    <tr>
+        <th class="bg-danger text-white">
+            @Html.DisplayNameFor(model => model.Nome)
+        </th>
+        <th class="bg-danger text-white">
+            @Html.DisplayNameFor(model => model.Cognome)
+        </th>
+        <th class="bg-danger text-white">
+            @Html.DisplayNameFor(model => model.ConteggioVerbali)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+       
+        <td class="fw-bold">
+            @Html.DisplayFor(modelItem => item.Nome)
+        </td>
+        <td class="fw-bold">
+            @Html.DisplayFor(modelItem => item.Cognome)
+        </td>
+     
+        <td class="fw-bold">
+            @Html.DisplayFor(modelItem => item.ConteggioVerbali)
+        </td>
+    
+    </tr>
+}
+
+</table>

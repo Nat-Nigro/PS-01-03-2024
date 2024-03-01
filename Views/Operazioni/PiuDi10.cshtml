@@ -1,0 +1,62 @@
+﻿@model IEnumerable<PS_01_03_2024.Models.Verbale>
+
+@{
+    ViewBag.Title = "PiuDi10";
+}
+
+<h2>Decurtamento maggiore di 10 punti</h2>
+<p>
+    @Html.ActionLink("<- Indietro", "Index")
+</p>
+
+
+<table class="table">
+    <tr>
+  
+        <th class="bg-danger text-white">
+            @Html.DisplayNameFor(model => model.DataViolazione)
+        </th>
+
+        <th class="bg-danger text-white">
+            @Html.DisplayNameFor(model => model.Importo)
+        </th>
+        <th class="bg-danger text-white">
+            @Html.DisplayNameFor(model => model.DecurtamentoPunti)
+        </th>
+
+        <th class="bg-danger text-white">
+            @Html.DisplayNameFor(model => model.Nome)
+        </th>
+        <th class="bg-danger text-white">
+            @Html.DisplayNameFor(model => model.Cognome)
+        </th>
+     
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+        
+            <td class="fw-bold">
+                @Html.DisplayFor(modelItem => item.DataViolazione)
+            </td>
+    
+            <td class="fw-bold">
+                @Html.DisplayFor(modelItem => item.Importo)
+            </td>
+            <td class="fw-bold">
+                @Html.DisplayFor(modelItem => item.DecurtamentoPunti)
+            </td>
+        
+            <td class="fw-bold">
+                @Html.DisplayFor(modelItem => item.Nome)
+            </td>
+            <td class="fw-bold">
+                @Html.DisplayFor(modelItem => item.Cognome)
+            </td>
+ 
+        </tr>
+    }
+
+</table>
